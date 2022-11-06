@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>People</title>
+</head>
+<h3>Array Operation</h3>
+<p id="1"></p>
+<p id="2"></p>
+<p id="3"></p>
+<p id="4"></p>
+<p id="5"></p>
+<p id="6"></p>
+<p id="7"></p>
+<p id="8"></p>
+<p id="9"></p>
+<p id="10"></p>
+<p id="11"></p>
+<body>
+    <script>
+        let people = ["Greg", "Mary", "Devon", "James"];
+        let name="";
+        for (let i = 0; i < people.length; i++) {
+        name += people[i] + "<br>";
+        console.log(people[i]);
+}
+        document.getElementById("1").innerHTML =name;
+        people.splice(people.indexOf('Greg'),1);
+        document.getElementById("2").innerHTML ="Remove Greg: "+people;
+        people.splice(people.indexOf('James'),1);
+        document.getElementById("3").innerHTML ="Remove James: "+people;
+        people.unshift("Matt");
+        document.getElementById("4").innerHTML ="Add Matt at First: "+people;
+        people.push("Harismita R");
+        document.getElementById("5").innerHTML ="Add my Name at Last: "+people;
+         name="";
+        for (let i = 0; i < people.length; i++) {
+        name += people[i] + "<br>";
+        console.log(people[i]);
+        if(people[i]=="Mary"){
+            break;
+        }
+}
+        document.getElementById("6").innerHTML =name;
+        let p1=people.slice(2)
+        document.getElementById("7").innerHTML ="Copy of the array using slice: "+p1;
+        document.getElementById("8").innerHTML ="Index of Mary: "+people.indexOf("Mary");
+        document.getElementById("9").innerHTML ="Index of foo: "+people.indexOf("foo");
+        people=["Greg", "Mary", "Devon", "James"];
+        people.splice(people.indexOf('Devon'),1,"Elizabeth","Artie");
+        document.getElementById("10").innerHTML ="Remove Devon using Splice: "+people;
+        let withBob=people.concat("Bob");
+        document.getElementById("11").innerHTML ="withBob Array: "+withBob;
+        
+
+    </script>
+</body>
+</html>

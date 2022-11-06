@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Split&Join</title>
+</head>
+<body>
+    <h3>Split</h3>
+    <p id="1"></p>
+    <p id="2"></p>
+    <p id="3"></p>
+    <p id="4"></p>
+    <h3>Join</h3>
+    <p id="5"></p>
+    <p id="6"></p>
+    <p id="7"></p>
+    <p id="8"></p>
+    <h3>Alphabetize</h3>
+    <p id="9"></p>
+    <p id="10"></p>
+    <script>
+        let str = `In space, no one can hear you code.`;
+        document.getElementById("1").innerHTML="str.split():"+str.split();
+        document.getElementById("2").innerHTML="str.split(e):"+str.split('e');
+        document.getElementById("3").innerHTML="str.split(' '):"+str.split(' ');
+        document.getElementById("4").innerHTML="str.split(''):"+str.split('');
+        let arr=['B', 'n', 'n', 5];
+        document.getElementById("5").innerHTML="arr.join():"+arr.join();
+        document.getElementById("6").innerHTML="arr.join('a'):"+arr.join('a');
+        document.getElementById("7").innerHTML="arr.join(''):"+arr.join('');
+        document.getElementById("8").innerHTML="arr.join(' '):"+arr.join(' ');
+        let s="water,space suits,food,plasma sword,batteries";
+        document.getElementById("9").innerHTML="s.split(''):"+s.split('');
+        document.getElementById("10").innerHTML="s.split():"+s.split();
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cargoHold</title>
+</head>
+<body>
+    <h3>Replace slinky to space tether</h3>
+    <p id="1"></p>
+    <h3>Remove last Element using pop</h3>
+    <p id="2"></p>
+    <h3>Remove first Element using shift</h3>
+    <p id="3"></p>
+    <h3>Unshift and Push</h3>
+    <p id="4"></p>
+    <h3>Template Array and Array Length:</h3>
+    <p id="5"></p>
+    <p id="6"></p>
+    <script>
+        let cargoHold=['oxygen tanks', 'space suits', 'parrot', 'instruction manual', 'meal packs', 'slinky', 'security blanket'];
+        cargoHold[5]='space tether';
+        document.getElementById("1").innerHTML=cargoHold;
+        cargoHold.pop();
+        document.getElementById("2").innerHTML=cargoHold;
+        cargoHold.shift();
+        document.getElementById("3").innerHTML=cargoHold;
+        cargoHold.unshift("1138");
+        cargoHold.push('20 meters');
+        document.getElementById("4").innerHTML=cargoHold;
+        let literal =`Final Array :`+cargoHold.toString();
+        document.getElementById("5").innerHTML= literal;
+        document.getElementById("6").innerHTML= `Array Length:`+cargoHold.length;
+    </script>
+</body>
+</html>
